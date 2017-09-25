@@ -971,8 +971,30 @@ font-family: 'Roboto Slab', serif;
     width: 300px;
     margin: 60px auto 0;
     padding: 10px;
-    background: black;
+    background: #222222;
     height: auto;
     opacity: .45; /* Set the opacity for a slightly transparent Google Form */ 
-    color: white;
+    color: #fbf9f9;
   }
+
+  .sub-form>.container {
+    padding: 25px 0px;
+}
+
+.feature {
+    text-align: center;
+    margin-bottom: 50px; }
+    .feature .feature-icon {
+      width: 130px;
+      height: 130px;
+      background: #f8198d;
+      border-radius: 50%;
+      text-align: center;
+      padding-top: 35px;
+      display: inline-block;
+      margin-bottom: 20px; }
+    .feature .feature-title {
+      font-size: 20px;
+      font-size: 1.25em;
+      color: #50576a;
+      font-weight: 400; }
