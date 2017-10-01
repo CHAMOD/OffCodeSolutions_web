@@ -998,3 +998,15 @@ font-family: 'Roboto Slab', serif;
       font-size: 1.25em;
       color: #50576a;
       font-weight: 400; }
+
+
+      a.list-group-item {
+        color: #555;
+        background-color: black;
+    }
+
+    .list-group {
+        padding-left: 20%;
+        padding-right: 20%;
+        margin-bottom: 20px;
+    }

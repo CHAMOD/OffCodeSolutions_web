@@ -1,24 +1,23 @@
-<?php
-// Email Submit
-// Note: filter_var() requires PHP >= 5.2.0
-if ( isset($_POST['email']) && isset($_POST['name']) && isset($_POST['message']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ) {
- 
-  // detect & prevent header injections
-  $test = "/(content-type|bcc:|cc:|to:)/i";
-  foreach ( $_POST as $key => $val ) {
-    if ( preg_match( $test, $val ) ) {
-      exit;
-    }
-  }
+<?php 
+ini_set( 'smtp_port', 465 );
 
-$headers = 'From: ' . $_POST["name"] . '<' . $_POST["email"] . '>' . "\r\n" .
-    'Reply-To: ' . $_POST["email"] . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
+$fname = $_POST['fname'];
+$lname = $_POST['lname'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
+$message = $_POST['message'];
 
-  //
-  mail( "ctpathirana@gmail.com", $_POST['message'], $headers );
- 
-  //      ^
-  //  Replace with your email 
-}
+$formcontent="From: $fname \n Message: $message";
+$recipient = "ctpathirana@gmail.com";
+$subject = "Contact Form";
+$mailheader = "From: $email \r\n";
+
+echo $fname;
+echo $lname;
+echo $email;
+echo $phone;
+echo $message;
+
+mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+echo "Thank You!";
 ?>
