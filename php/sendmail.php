@@ -20,4 +20,6 @@ echo $message;
 
 mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
 echo "Thank You!";
+header('Location: ../index.html');
+exit;
 ?>
