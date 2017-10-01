@@ -7,7 +7,7 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
 
-$formcontent="From: $fname \n Message: $message";
+$formcontent="From: $fname $lname \n Phone No: $phone \n E-mail: $email \n Message: $message";
 $recipient = "ctpathirana@gmail.com";
 $subject = "Contact Form";
 $mailheader = "From: $email \r\n";
