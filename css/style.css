@@ -518,6 +518,7 @@ p.lead
     padding-top:10px;
 }
 .about-box p{
+    text-align: justify;
 	font-size:0.93em;
         padding-top:10px;
 }
@@ -1018,4 +1019,12 @@ font-family: 'Roboto Slab', serif;
         padding-top: 5%;
         padding-left: 30%;
         padding-bottom: 7%;
+    }
+
+    .nim-service .nim-service-detail p {
+        text-align: justify;
+        text-justify: inter-word;
+        margin-top: 10px;
+        font-size: 0.83em;
+        color: #b4bae4;
     }
